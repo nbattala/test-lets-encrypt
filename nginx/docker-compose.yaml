@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  nginx-service:
+    container_name: nginx-letsencrypt
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ../shared-nginx-certbot:/letsencrypt
+      - ../certs:/etc/letsencrypt

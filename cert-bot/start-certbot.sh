@@ -2,4 +2,4 @@
 
 docker build -t certbot .
 
-docker-compose run --rm cert-bot-service bash
+docker compose run --rm cert-bot-service bash -c certbot

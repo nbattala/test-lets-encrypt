@@ -1,8 +1,8 @@
 version: '3.9'
 services:
-  cert-bot-service:
-    container_name: cert-bot-run
+  certbot-service:
+    container_name: certbot-letsencrypt
     image: certbot
     volumes:
-      - .:/letsencrypt
-      - ./certs:/etc/letsencrypt
+      - ../shared-nginx-certbot:/letsencrypt
+      - ../certs:/etc/letsencrypt
